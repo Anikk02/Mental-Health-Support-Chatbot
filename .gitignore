@@ -1,0 +1,85 @@
+# ==============================
+# Python / Virtual Environment
+# ==============================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+*.egg-info/
+*.egg
+env/
+venv/
+ENV/
+*.env
+
+# ==============================
+# Logs & temporary files
+# ==============================
+*.log
+*.sqlite3
+*.db
+*.bak
+*.swp
+*.tmp
+*.DS_Store
+
+# ==============================
+# Hugging Face / AI models
+# ==============================
+/trained-mentalchat-model/
+*.pt
+*.bin
+*.ckpt
+*.safetensors
+/.cache/
+huggingface/
+*.h5
+*.t5
+*.pth
+*.model
+trainer_state.json
+tokenizer.json
+tokenizer_config.json
+generation_config.json
+config.json
+special_tokens_map.json
+
+# ==============================
+# IDE / Editor
+# ==============================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# ==============================
+# OS-specific
+# ==============================
+Thumbs.db
+desktop.ini
+.DS_Store
+$RECYCLE.BIN/
+
+# ==============================
+# Sensitive / Secrets
+# ==============================
+.env
+secrets.json
+jwt_secret.key
+smtp_pass.txt
+
+# ==============================
+# Other temporary or local files
+# ==============================
+*.log
+*.pid
+*.seed
+*.coverage
+*.pytest_cache/
+.ipynb_checkpoints/
+
+app/trained-mentalchat-model/
+frontend/

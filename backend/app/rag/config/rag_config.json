@@ -1,0 +1,7 @@
+{
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "max_context_chunks": 5,
+  "memory_confidence_threshold": 0.6,
+  "belief_reinforcement_threshold": 2,
+  "decay_days": 30
+}

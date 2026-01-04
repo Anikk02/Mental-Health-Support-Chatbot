@@ -1,0 +1,24 @@
+{
+  "users": {
+    "69445c40ecf91489aa328378": {
+      "long_term_memory": [
+        {
+          "emotion": "POSITIVE(0.001)",
+          "risk_score": 0.0997,
+          "last_seen": "2025-12-24T14:14:47.273251"
+        },
+        {
+          "emotion": "POSITIVE(0.357)",
+          "risk_score": 0.0,
+          "last_seen": "2025-12-24T14:15:20.075906"
+        },
+        {
+          "emotion": "POSITIVE(0.016)",
+          "risk_score": 0.0968,
+          "last_seen": "2025-12-24T14:16:24.673767"
+        }
+      ],
+      "beliefs": {}
+    }
+  }
+}
