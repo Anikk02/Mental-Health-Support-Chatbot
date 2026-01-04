@@ -83,3 +83,4 @@ smtp_pass.txt
 
 app/trained-mentalchat-model/
 frontend/
+trained-mentalchat-model/
