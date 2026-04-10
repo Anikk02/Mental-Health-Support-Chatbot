@@ -1,0 +1,135 @@
+/* =========================================================
+   GLOBAL RESET & BASE
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #f4fffd;
+  color: #084c42;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+/* Remove default button styles */
+button {
+  background: none;
+  border: none;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================================================
+   THEME VARIABLES
+   ========================================================= */
+
+/* Default (teal) */
+body[data-theme="teal"] {
+  --accent: #2fa99b;
+  --accent-soft: #e8fffb;
+  --accent-border: #ccefe9;
+}
+
+/* Soft Blue */
+body[data-theme="soft-blue"] {
+  --accent: #4a8fe7;
+  --accent-soft: #eef4ff;
+  --accent-border: #d6e4ff;
+}
+
+/* Sage */
+body[data-theme="sage"] {
+  --accent: #8bbf92;
+  --accent-soft: #f2fbf4;
+  --accent-border: #dbeee0;
+}
+
+/* =========================================================
+   APP LAYOUT HELPERS
+   ========================================================= */
+
+/* Used by ChatPage, HistoryPage, MoodPage, etc. */
+.app-layout {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.sidebar-container {
+  flex-shrink: 0;
+}
+
+.chat-main-content {
+  flex: 1;
+  overflow: hidden;
+  background: #f4fffd;
+}
+
+/* Generic card wrapper used by analysis/history pages */
+.analysis-page-card {
+  padding: 20px;
+}
+
+/* =========================================================
+   LOGIN / GATE CONTAINERS (STRUCTURAL ONLY)
+   ========================================================= */
+
+.login-gate-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-gate-card {
+  max-width: 360px;
+  width: 90%;
+  padding: 24px;
+  border-radius: 18px;
+  text-align: center;
+}
+
+/* =========================================================
+   ACCESSIBILITY UTILITIES
+   ========================================================= */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+/* =========================================================
+   SHARED TEXT UTILITIES
+   ========================================================= */
+
+.muted {
+  color: #6b8f8a;
+  font-size: 14px;
+}

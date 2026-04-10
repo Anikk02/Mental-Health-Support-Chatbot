@@ -1,0 +1,176 @@
+/* ================================
+   MOOD TRACKER
+   ================================ */
+
+.mood-container {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 8px 24px rgba(0, 60, 50, 0.12);
+}
+
+/* ================================
+   TITLE
+   ================================ */
+
+.mood-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #0b5a54;
+}
+
+/* ================================
+   OVERVIEW
+   ================================ */
+
+.mood-overview {
+  background: #f2fffd;
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 16px;
+}
+
+.overview-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  font-size: 14px;
+  color: #084c42;
+}
+
+/* ================================
+   RISK BADGES
+   ================================ */
+
+.risk-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.risk-low {
+  background: #e6f9f4;
+  color: #0b6b61;
+}
+
+.risk-medium {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.risk-high {
+  background: #ffe3e3;
+  color: #a10000;
+}
+
+.risk-critical {
+  background: #ffd6d6;
+  color: #7a0000;
+}
+
+/* ================================
+   GRID
+   ================================ */
+
+.mood-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+}
+
+/* ================================
+   CARDS
+   ================================ */
+
+.mood-card {
+  background: #f8fffd;
+  border-radius: 14px;
+  padding: 14px;
+  text-align: center;
+}
+
+.mood-icon {
+  font-size: 22px;
+  color: #2fa99b;
+  margin-bottom: 6px;
+}
+
+.mood-icon.risk {
+  color: #a10000;
+}
+
+.mood-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: #084c42;
+}
+
+.mood-label {
+  font-size: 13px;
+  color: #0b6b61;
+}
+
+/* ================================
+   METERS
+   ================================ */
+
+.mood-meter {
+  width: 100%;
+  height: 10px;
+  background: #e0f3ef;
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 6px 0;
+}
+
+.meter-fill {
+  height: 100%;
+  background: #2fa99b;
+}
+
+/* ================================
+   CTA
+   ================================ */
+
+.risk-cta {
+  margin-top: 18px;
+  background: #e8fffb;
+  padding: 14px;
+  border-radius: 14px;
+}
+
+.risk-cta h4 {
+  margin: 0 0 4px;
+  color: #084c42;
+}
+
+.risk-cta p {
+  font-size: 14px;
+  color: #0b6b61;
+  margin-bottom: 6px;
+}
+
+.risk-cta a {
+  font-weight: 600;
+  color: #2fa99b;
+  text-decoration: none;
+}
+
+.risk-cta a:hover {
+  text-decoration: underline;
+}
+
+/* ================================
+   SHARED
+   ================================ */
+
+.muted {
+  color: #6b8f8a;
+  font-size: 14px;
+}

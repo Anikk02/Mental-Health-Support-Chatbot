@@ -1,0 +1,82 @@
+/* ================================
+   RESPONSE ANALYSIS
+   ================================ */
+
+.analysis-container {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 8px 24px rgba(0, 60, 50, 0.12);
+}
+
+/* ================================
+   TITLE
+   ================================ */
+
+.analysis-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #0b5a54;
+}
+
+/* ================================
+   GRID
+   ================================ */
+
+.analysis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+/* ================================
+   CARDS
+   ================================ */
+
+.analysis-card-enhanced {
+  background: #f8fffd;
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 12px rgba(0, 60, 50, 0.08);
+}
+
+/* ================================
+   ICON
+   ================================ */
+
+.analysis-icon {
+  font-size: 24px;
+}
+
+/* ================================
+   METRICS
+   ================================ */
+
+.analysis-metric {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #084c42;
+}
+
+.metric-label {
+  font-size: 13px;
+  color: #0b6b61;
+}
+
+/* ================================
+   SHARED
+   ================================ */
+
+.muted {
+  color: #6b8f8a;
+  font-size: 14px;
+}

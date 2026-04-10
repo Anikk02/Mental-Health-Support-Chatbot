@@ -1,0 +1,71 @@
+/* ================================
+   2FA SETUP UI
+   ================================ */
+
+.twofa-setup {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 14px;
+  background: #f4fffd;
+  border: 1px solid #bfeee6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ================================
+   TEXT
+   ================================ */
+
+.twofa-setup h4 {
+  margin: 0;
+  color: #0b5a54;
+  font-weight: 600;
+}
+
+.twofa-setup p {
+  font-size: 14px;
+  color: #084c42;
+  text-align: center;
+}
+
+/* ================================
+   INPUT
+   ================================ */
+
+.twofa-setup input {
+  width: 180px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #b8e9e2;
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+
+.twofa-setup input:focus {
+  outline: none;
+  border-color: #2fa99b;
+  box-shadow: 0 0 0 2px #2fa99b55;
+}
+
+/* ================================
+   BUTTON
+   ================================ */
+
+.twofa-setup button {
+  padding: 10px 18px;
+  background: #2fa99b;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.twofa-setup button:hover {
+  background: #268f85;
+}

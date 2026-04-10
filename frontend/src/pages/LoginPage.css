@@ -1,0 +1,145 @@
+/* ================================
+   LOGIN PAGE — AUTH WRAPPER
+   ================================ */
+
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(160deg, #d8fff7, #c0f3ea);
+  padding: 20px;
+}
+
+/* ================================
+   LOGIN CARD
+   ================================ */
+
+.auth-card {
+  width: 360px;
+  max-width: 100%;
+  background: #ffffffcc;
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 10px 40px rgba(0, 60, 50, 0.15);
+  animation: cardFade 0.5s ease;
+}
+
+.auth-card.animated {
+  transform: translateY(12px);
+  opacity: 0;
+  animation: slideUp 0.6s ease forwards;
+}
+
+/* ================================
+   TEXT (SCOPED — IMPORTANT)
+   ================================ */
+
+.auth-card h2 {
+  margin: 0 0 6px;
+  color: #084c42;
+  font-weight: 700;
+}
+
+.auth-card .subtext {
+  color: #0b5a54;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+/* ================================
+   FORM
+   ================================ */
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.auth-input {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 2px solid #b8e9e2;
+  background: white;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: #2fa99b;
+  box-shadow: 0 0 0 2px #2fa99b55;
+}
+
+/* ================================
+   BUTTON
+   ================================ */
+
+.auth-btn {
+  padding: 12px;
+  background: #2fa99b;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.auth-btn:hover {
+  background: #268f85;
+}
+
+/* ================================
+   ERROR
+   ================================ */
+
+.error-msg {
+  margin-top: 10px;
+  color: #d64242;
+  font-weight: 500;
+  background: #ffe1e1;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* ================================
+   LINKS
+   ================================ */
+
+.auth-links {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.auth-links a {
+  color: #0b675f;
+  margin: 0 6px;
+  text-decoration: underline;
+}
+
+.auth-links a:hover {
+  color: #064f48;
+}
+
+/* ================================
+   ANIMATIONS
+   ================================ */
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

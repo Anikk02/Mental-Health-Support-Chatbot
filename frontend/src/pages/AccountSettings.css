@@ -1,0 +1,230 @@
+/* ============================
+   AccountSettings Page Styles
+   ============================ */
+
+/* MAIN WRAPPER */
+.settings-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+/* RECTANGULAR BOX */
+.settings-card-rect {
+  background: var(--card-bg);
+  width: 100%;
+  max-width: 850px; /* ✅ FIX */
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  animation: fadeIn 0.3s ease;
+}
+
+/* Title */
+.settings-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.settings-sub {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 25px;
+}
+
+/* GRID */
+.settings-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+}
+
+/* Panels */
+.settings-left,
+.settings-right {
+  background: var(--card-light);
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 60, 50, 0.08);
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+/* PROFILE */
+.profile-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+}
+
+.upload-btn {
+  font-size: 12px;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+/* Profile Info */
+.profile-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Input */
+.input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid var(--border);
+}
+
+/* BUTTONS (single source of truth) */
+.btn-outline,
+.btn-primary,
+.logout-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+/* Outline */
+.btn-outline {
+  border: 2px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+}
+
+.btn-outline:hover {
+  background: var(--accent);
+  color: white;
+}
+
+/* Primary */
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+/* Logout */
+.logout-btn {
+  background: #ffe5e5;
+  color: #c0392b;
+  border: none;
+}
+
+.logout-btn:hover {
+  background: #ffcccc;
+}
+
+/* Toggle switch */
+.switch {
+  position: relative;
+  width: 42px;
+  height: 22px;
+}
+
+.switch input {
+  opacity: 0;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  border-radius: 34px;
+  background: var(--switch-bg);
+}
+
+.slider:before {
+  content: "";
+  height: 16px;
+  width: 16px;
+  background: var(--switch-thumb);
+  border-radius: 50%;
+  position: absolute;
+  left: 3px;
+  bottom: 3px;
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background: var(--switch-active-bg);
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* QR BOX */
+.qr-box {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.qr-box canvas {
+  margin: 10px auto;
+}
+
+/* ============================
+   🔥 MOBILE FIX
+   ============================ */
+
+@media (max-width: 768px) {
+
+  .settings-card-rect {
+    padding: 20px;
+  }
+
+  .settings-grid {
+    grid-template-columns: 1fr; /* ✅ STACK */
+  }
+
+  .profile-row {
+    flex-direction: column; /* ✅ FIX */
+    gap: 10px;
+  }
+
+  .settings-title {
+    font-size: 22px;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+
+  .qr-box canvas {
+    width: 140px !important;
+    height: 140px !important;
+  }
+
+  body {
+    overflow-x: hidden; /* ✅ no sideways scroll */
+  }
+}

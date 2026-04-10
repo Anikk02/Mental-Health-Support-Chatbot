@@ -1,0 +1,238 @@
+/* =====================================================
+   RESET / BASE
+   ===================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   MAIN LAYOUT
+   ===================================================== */
+
+.app-layout {
+  display: flex;
+  height: 100dvh;
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+
+/* =====================================================
+   CHAT AREA
+   ===================================================== */
+
+.chat-main-content {
+  flex: 1;
+  padding-top:20px;
+  display: flex;
+  flex-direction: column;
+  background: var(--chat-bg);
+  overflow: hidden;
+}
+
+/* =====================================================
+   SIDEBAR
+   ===================================================== */
+
+.sidebar-container {
+  width: 260px;
+  flex-shrink: 0;
+  z-index: 1000;
+  background: var(--card-bg);
+
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    width 0.35s ease;
+}
+
+/* Collapsed sidebar */
+.app-layout[data-sidebar="closed"] .sidebar-container {
+  transform: translateX(-100%);
+}
+
+/* =====================================================
+   DESKTOP FIX: DISABLE BACKDROP
+   ===================================================== */
+
+@media (min-width: 1025px) {
+  .sidebar-backdrop {
+    display: none;
+    pointer-events: none;
+  }
+}
+
+/* =====================================================
+   MOBILE / TABLET SIDEBAR
+   ===================================================== */
+
+@media (max-width: 1024px) {
+  .sidebar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100dvh;
+    box-shadow: 12px 0 28px rgba(0, 0, 0, 0.28);
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar-container {
+    width: 280px;
+  }
+}
+
+/* =====================================================
+   BACKDROP (MOBILE)
+   ===================================================== */
+
+.sidebar-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 900;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.app-layout[data-sidebar="open"] .sidebar-backdrop {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* =====================================================
+   CHATGPT-STYLE HAMBURGER
+   ===================================================== */
+
+.hamburger-btn {
+  position: fixed;
+  top: 14px;
+  left: 14px;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+
+  z-index: 2000;
+}
+
+.hamburger-btn span {
+  width: 20px;
+  height: 2px;
+  background: #e6e6e6;
+  border-radius: 2px;
+  transition: 0.25s ease;
+}
+
+.hamburger-btn:hover span {
+  background: #000000;
+}
+
+/* Open → X animation */
+.hamburger-btn.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-btn.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =====================================================
+   LOGIN GATE (OPTIONAL / UNUSED BUT SAFE)
+   ===================================================== */
+
+.login-gate-container {
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-gradient);
+}
+
+.login-gate-card {
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: 18px;
+  width: min(420px, 92vw);
+  text-align: center;
+  box-shadow: var(--shadow);
+  animation: fadeIn 0.4s ease;
+}
+
+.login-gate-card h2 {
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.login-quote {
+  color: var(--text-secondary);
+  margin-bottom: 22px;
+}
+
+.login-gate-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.gate-btn {
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.25s ease;
+  text-align: center;
+}
+
+.gate-btn.primary {
+  background: var(--accent);
+  color: white;
+}
+
+.gate-btn.secondary {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+.gate-btn.secondary:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.gate-btn.link {
+  background: none;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* =====================================================
+   ACCESSIBILITY
+   ===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .sidebar-container,
+  .sidebar-backdrop,
+  .hamburger-btn span {
+    transition: none;
+  }
+}
+
+/* Lock scroll when sidebar open */
+body[data-sidebar-open="true"] {
+  overflow: hidden;
+}

@@ -1,0 +1,119 @@
+/* ================================
+   HISTORY LIST
+   ================================ */
+
+.history-container {
+  width: 100%;
+}
+
+.history-title {
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0b5a54;
+}
+
+/* ================================
+   SCROLL AREA
+   ================================ */
+
+.history-scroll {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+/* ================================
+   HISTORY CARD
+   ================================ */
+
+.history-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 6px 18px rgba(0, 60, 50, 0.1);
+  outline: none;
+}
+
+.history-card:focus {
+  box-shadow: 0 0 0 2px #2fa99b;
+}
+
+/* ================================
+   HEADER
+   ================================ */
+
+.history-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.h-time {
+  font-size: 12px;
+  color: #0b6b61;
+}
+
+/* ================================
+   SECTIONS
+   ================================ */
+
+.history-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+/* ================================
+   ICONS
+   ================================ */
+
+.h-icon {
+  font-size: 16px;
+  margin-top: 2px;
+}
+
+.h-icon.user {
+  color: #2fa99b;
+}
+
+.h-icon.bot {
+  color: #0b5a54;
+}
+
+/* ================================
+   BUBBLES
+   ================================ */
+
+.history-bubble {
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.4;
+  max-width: 90%;
+}
+
+.user-bubble {
+  background: #e4fbf7;
+  color: #084c42;
+}
+
+.bot-bubble {
+  background: #f2fdfb;
+  color: #063f39;
+  border: 1px solid #d2f1ec;
+}
+
+/* ================================
+   EMPTY STATE
+   ================================ */
+
+.muted {
+  color: #6b8f8a;
+  font-size: 14px;
+}

@@ -1,0 +1,110 @@
+/* ================================
+   TWO FACTOR AUTH PAGE
+   ================================ */
+
+.auth-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(160deg, #d8fff7, #c0f3ea);
+  padding: 20px;
+}
+
+/* ================================
+   AUTH CARD
+   ================================ */
+
+.auth-card {
+  width: 360px;
+  background: #ffffffcc;
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 10px 40px rgba(0, 60, 50, 0.15);
+  animation: cardFade 0.5s ease;
+}
+
+/* ================================
+   TEXT
+   ================================ */
+
+h2 {
+  margin: 0 0 6px;
+  color: #084c42;
+  font-weight: 700;
+}
+
+.auth-sub {
+  color: #0b5a54;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+/* ================================
+   FORM
+   ================================ */
+
+.auth-input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 2px solid #b8e9e2;
+  background: white;
+  font-size: 16px;
+  letter-spacing: 3px;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: #2fa99b;
+  box-shadow: 0 0 0 2px #2fa99b55;
+}
+
+/* ================================
+   BUTTON
+   ================================ */
+
+.auth-btn {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px;
+  background: #2fa99b;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.auth-btn:hover {
+  background: #268f85;
+}
+
+/* ================================
+   LINKS
+   ================================ */
+
+.auth-link {
+  display: block;
+  margin-top: 16px;
+  text-align: center;
+  color: #0b675f;
+  text-decoration: underline;
+}
+
+.auth-link:hover {
+  color: #064f48;
+}
+
+/* ================================
+   ANIMATION USED HERE
+   ================================ */
+
+@keyframes cardFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
