@@ -82,5 +82,7 @@ smtp_pass.txt
 .ipynb_checkpoints/
 
 app/trained-mentalchat-model/
-frontend/
 trained-mentalchat-model/
+Dockerfile
+.dockerignor
+backend/.dockerignore
