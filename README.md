@@ -227,6 +227,29 @@ Conversation Storage + Mood Tracking
   - History panel
   - Mood tracker
 
+## 📸 Screenshots
+
+### 🔐 Authentication (Signup)
+![Authentication](screenshots/register.png)
+
+### 🔐 Authentication (Login)
+![Authentication](screenshots/login.png)
+
+---
+
+### 💬 Chatbot Interaction
+![Chat Interface](screenshots/chat.png)
+
+---
+
+### 📜 Conversation History
+![Conversation History](screenshots/history.png)
+
+---
+
+### 📊 Mood Tracking Dashboard
+![Mood Tracker](screenshots/mood.png)
+
 ### 🗄️ Database
 - MongoDB stores:
   - User data
