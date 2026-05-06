@@ -337,24 +337,23 @@ uvicorn main:app --reload
 cd frontend
 npm install
 npm start
+```
 
-📄 License
-This project is for educational and research purposes only.
+## 📄 License
 
-👨‍💻 Author
-Aniket Paswan
+This project is for **educational and research purposes only**.
 
-Designed and developed complete system
+## 👨‍💻 Author
 
-Built AI pipeline, safety system, and architecture
+**Aniket Paswan**
 
-Performed evaluation and optimization
+- Designed and developed complete system
+- Built AI pipeline, safety system, and architecture
+- Performed evaluation and optimization
+- Developed frontend and backend integration
 
-Developed frontend and backend integration
+## 🙏 Acknowledgments
 
-🙏 Acknowledgments
-Hugging Face for transformer models
-
-MentalChat16 dataset contributors
-
-Open-source community
+- Hugging Face for transformer models
+- MentalChat16 dataset contributors
+- Open-source community
